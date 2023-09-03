@@ -1,0 +1,149 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container>*{
+    box-shadow: -1px 1px 7px 0px black;
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+
+.header{
+    grid-area: header;
+    background-color: white;
+
+}
+
+.section{
+    grid-area: section;
+    background-color: white;
+}
+
+.slider{
+    background-color: orangered;
+    height: 0px;
+    
+    
+}
+
+.section1{
+    background-color: black;
+    height: 200px; 
+    
+    
+}
+
+.article{
+    background-color: darkorange;
+    height: 120px;
+    margin-top: 10px;
+}
+
+.footer{
+    grid-area: footer;
+    background-color: black;
+
+}
+.footer img{
+    width: 180px;
+    height: 180px;
+    
+}
+
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "header"
+    "section"
+    "footer"
+    ;
+
+}
+
+@media(min-width: 1080px){
+    .grid-container{
+       grid-template: 
+       "header header header"150px
+       "section section section" auto
+       "footer footer footer"200px /
+       200px auto 300px;
+    }
+}
+.header img{
+    width: 180px;
+    height: 150px;
+    float: left;
+}
+
+ /* slider */
+
+
+ .slider{
+    grid-area: slider;
+}
+/* aca de define el tamano del slider  */
+.slider {
+    text-align: center;
+    overflow: hidden;
+    height: 1000px;
+    width: 1000px;
+    margin: 0px auto;
+
+
+    
+    
+}
+
+#imagenes {
+    margin: 0;
+    left: 0;
+    display: flex;
+    width: 500%;
+    height: 100%;
+    animation: 15s slidy infinite alternate linear;
+    animation-timing-function: step-start;
+}
+
+li {
+    width: 100%;
+    list-style-type: none;
+}
+
+img {
+    object-fit: cover;
+    width: 90%;
+    height: 70%;
+    border-radius: 4px;
+}
+
+@keyframes slidy {
+    0% {
+        margin-left: 0;
+    }
+    20% {
+        margin-left: 0;
+    }
+    40% {
+        margin-left: -100%;
+    }
+    60% {
+        margin-left: -100%;
+    }
+    70% {
+        margin-left: -200%;
+    }
+    80% {
+        margin-left: -200%;
+    }
+    90% {
+        margin-left: -300%;
+    }
+    100% {
+        margin-left: -400%;
+    }
+}
